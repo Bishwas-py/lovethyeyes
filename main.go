@@ -67,7 +67,7 @@ func NewEyeSaver() *EyeSaver {
 
 	saver := &EyeSaver{
 		ShortBreakInterval: 7 * time.Second,  // 20-20-20 rule
-		LongBreakInterval:  60 * time.Minute, // Longer break every hour
+		LongBreakInterval:  12 * time.Second, // Longer break every hour
 		StatShowInterval:   14 * time.Minute, // Show stats every 14 minutes
 		AppIcon:            appIcon,
 		ConfigPath:         configPath,
