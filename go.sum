@@ -1,10 +1,4 @@
-github.com/Bishwas-py/notify v0.0.0-20181008203735-20632c9a275a h1:id+mGEil4S2GsW2EFLGwEY751UWJxdI6NQqm9hcNrsk=
-github.com/Bishwas-py/notify v0.0.0-20181008203735-20632c9a275a/go.mod h1:X/Hq+x1U0T+sWSkzzRHx+yI4U+DxSjRNCY6QVDUOp6A=
-github.com/Bishwas-py/notify v0.0.0-20250317025822-9390f7037fdf h1:vzG4eGbMUalguBo5pE9OgEPl8Cw/VbrxPFFDCdL/2vM=
-github.com/Bishwas-py/notify v0.0.0-20250317025822-9390f7037fdf/go.mod h1:X/Hq+x1U0T+sWSkzzRHx+yI4U+DxSjRNCY6QVDUOp6A=
-github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb h1:6S+TKObz6+Io2c8IOkcbK4Sz7nj6RpEVU7TkvmsZZcw=
-github.com/deckarep/gosx-notifier v0.0.0-20180201035817-e127226297fb/go.mod h1:wf3nKtOnQqCp7kp9xB7hHnNlZ6m3NoiOxjrB9hFRq4Y=
-github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d h1:VhgPp6v9qf9Agr/56bj7Y/xa04UccTW04VP0Qed4vnQ=
-github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d/go.mod h1:YUTz3bUH2ZwIWBy3CJBeOBEugqcmXREj14T+iG/4k4U=
-gopkg.in/toast.v1 v1.0.0-20180812000517-0a84660828b2 h1:MZF6J7CV6s/h0HBkfqebrYfKCVEo5iN+wzE4QhV3Evo=
-gopkg.in/toast.v1 v1.0.0-20180812000517-0a84660828b2/go.mod h1:s1Sn2yZos05Qfs7NKt867Xe18emOmtsO3eAKbDaon0o=
+github.com/Bishwas-py/notify v0.0.1 h1:JP7LfMgoPVH1v/5DOYuVHUS6+pF6GJXFz0fZT+koY2M=
+github.com/Bishwas-py/notify v0.0.1/go.mod h1:NarzTZ0rSLPRPuWHSUpgfLc9mrxzUauhW/c7d0sKzFE=
+github.com/godbus/dbus/v5 v5.1.0 h1:4KLkAxT3aOY8Li4FRJe/KvhoNFFxo0m6fNuFUO8QJUk=
+github.com/godbus/dbus/v5 v5.1.0/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
