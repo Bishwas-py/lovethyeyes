@@ -31,7 +31,7 @@ type UserStats struct {
 	LastStatShow   time.Time `json:"last_stat_show"`
 }
 
-// Notification messages for variety
+// MessageBank Notification messages for variety
 type MessageBank struct {
 	ShortBreakMessages []string
 	LongBreakMessages  []string
@@ -66,8 +66,8 @@ func NewEyeSaver() *EyeSaver {
 	rand.Seed(time.Now().UnixNano())
 
 	saver := &EyeSaver{
-		ShortBreakInterval: 7 * time.Second,  // 20-20-20 rule
-		LongBreakInterval:  12 * time.Second, // Longer break every hour
+		ShortBreakInterval: 20 * time.Minute, // 20-20-20 rule
+		LongBreakInterval:  60 * time.Minute, // Longer break every hour
 		StatShowInterval:   14 * time.Minute, // Show stats every 14 minutes
 		AppIcon:            appIcon,
 		ConfigPath:         configPath,
@@ -122,7 +122,7 @@ func NewEyeSaver() *EyeSaver {
 	}
 
 	// Try to load saved stats
-	saver.LoadStats()
+	_ = saver.LoadStats()
 	return saver
 }
 
@@ -161,7 +161,7 @@ func (e *EyeSaver) Start() {
 	e.LastLongBreak = time.Now()
 
 	// Main event loop
-	ticker := time.NewTicker(1 * time.Second)
+	ticker := time.NewTicker(1 * time.Minute)
 	for {
 		select {
 		case <-ticker.C:
@@ -193,7 +193,7 @@ func (e *EyeSaver) checkTimers() {
 	}
 
 	// Save stats periodically
-	e.SaveStats()
+	_ = e.SaveStats()
 }
 
 // randomMessage gets a random message from a slice
@@ -272,7 +272,7 @@ func (e *EyeSaver) TriggerLongBreak() {
 				Title: "Logout Now!",
 				Trigger: func() {
 					e.Stats.EyeLoveScore += 5 // Extra points for logout
-					e.SaveStats()
+					_ = e.SaveStats()
 					HandleLogout()
 				},
 			},
@@ -306,7 +306,7 @@ func (e *EyeSaver) RecordBreakTaken(isShort bool) {
 		e.Stats.EyeLoveScore++
 	}
 
-	e.SaveStats()
+	_ = e.SaveStats()
 }
 
 // RecordBreakSkipped updates statistics when a user skips a break
@@ -314,14 +314,14 @@ func (e *EyeSaver) RecordBreakSkipped() {
 	log.Println("Break skipped!")
 	e.Stats.BreaksSkipped++
 	e.Stats.EyeHatredScore++
-	e.SaveStats()
+	_ = e.SaveStats()
 }
 
 // SnoozeBreak delays the next break
 func (e *EyeSaver) SnoozeBreak(duration time.Duration) {
 	log.Printf("Break snoozed for %s", duration)
 	e.LastShortBreak = time.Now().Add(duration)
-	e.SaveStats()
+	_ = e.SaveStats()
 }
 
 // ShowStats displays the current eye care statistics
@@ -414,7 +414,7 @@ func (e *EyeSaver) ShowStats() {
 				Title: "Thanks for reminding me!",
 				Trigger: func() {
 					e.Stats.EyeLoveScore++
-					e.SaveStats()
+					_ = e.SaveStats()
 				},
 			},
 		},
@@ -473,7 +473,7 @@ func HandleLogout() {
 	}
 }
 
-// LogoutViaGnome attempts to logout via GNOME session manager
+// LogoutViaGnome attempts to log out via GNOME session manager
 func LogoutViaGnome() error {
 	conn, err := dbus.SessionBus()
 	if err != nil {
@@ -486,7 +486,7 @@ func LogoutViaGnome() error {
 	return call.Err
 }
 
-// LogoutViaSystemd attempts to logout via systemd loginctl
+// LogoutViaSystemd attempts to log out via systemd loginctl
 func LogoutViaSystemd() error {
 	cmd := exec.Command("loginctl", "terminate-user", os.Getenv("USER"))
 	return cmd.Run()
