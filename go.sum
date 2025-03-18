@@ -1,4 +1,6 @@
-github.com/Bishwas-py/notify v0.0.1 h1:JP7LfMgoPVH1v/5DOYuVHUS6+pF6GJXFz0fZT+koY2M=
-github.com/Bishwas-py/notify v0.0.1/go.mod h1:NarzTZ0rSLPRPuWHSUpgfLc9mrxzUauhW/c7d0sKzFE=
+github.com/Bishwas-py/notify v0.0.3 h1:OU1eo88EywBwG8CeGX3HhOtaKrKEZRZ5xdoQlLfhACo=
+github.com/Bishwas-py/notify v0.0.3/go.mod h1:NarzTZ0rSLPRPuWHSUpgfLc9mrxzUauhW/c7d0sKzFE=
+github.com/Bishwas-py/notify v0.0.4 h1:nbikMLTxnB9/pRxSWoxi/OY90dC9UCDBhWfF9RcxtKk=
+github.com/Bishwas-py/notify v0.0.4/go.mod h1:NarzTZ0rSLPRPuWHSUpgfLc9mrxzUauhW/c7d0sKzFE=
 github.com/godbus/dbus/v5 v5.1.0 h1:4KLkAxT3aOY8Li4FRJe/KvhoNFFxo0m6fNuFUO8QJUk=
 github.com/godbus/dbus/v5 v5.1.0/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
